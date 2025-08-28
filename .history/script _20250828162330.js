@@ -38,16 +38,14 @@ callButtons.forEach(button => {
         // Add to Call History
         const time = new Date().toLocaleTimeString();
         const div = document.createElement('div');
-        div.classList.add('flex', 'gap-4', 'justify-between', 'items-center', 'bg-[#fafafa]', 'rounded-sm', 'p-2','text-xs', 'm-2');
+        div.classList.add('flex', 'gap-4', 'justify-between', 'items-center', 'bg-[#fafafa]', 'rounded-sm', 'p-2','text-xl', 'm-2');
         div.innerHTML = `
             <div>
                 <h4 class="font-semibold text-lg">${serviceName}</h4>
                 <p class="text-gray-600">${serviceNumber}</p>
             </div>
             <p class="text-gray-800">${time}</p>
-        `
-        ;
-
+        `;
         history.appendChild(div);
     });
 });
@@ -57,24 +55,3 @@ clearBtn.addEventListener('click', () => {
     history.innerHTML = "";
 });
 
-
-// copy button count
-    let copyCount = 0;
-
-    // from navbar
-    const copyCountElement = document.getElementById('copyCount');
-    
-    const copies = document.querySelectorAll('.btn-copy');
-    for (const copy of copies) {
-        copy.addEventListener('click', function(event) {
-            // console.log(copy);
-            const hotlineElement = event.target.parentNode.parentNode.querySelector('.hotline').innerText;
-                
-                navigator.clipboard.writeText(hotlineElement);
-                // console.log(hotlineElement);
-
-            alert(`${hotlineElement} copied`);
-            copyCount++;
-            copyCountElement.innerText = copyCount;
-        })
-      }

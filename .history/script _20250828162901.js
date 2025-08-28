@@ -45,9 +45,8 @@ callButtons.forEach(button => {
                 <p class="text-gray-600">${serviceNumber}</p>
             </div>
             <p class="text-gray-800">${time}</p>
-        `
-        ;
-
+        `;
+        
         history.appendChild(div);
     });
 });
@@ -57,24 +56,3 @@ clearBtn.addEventListener('click', () => {
     history.innerHTML = "";
 });
 
-
-// copy button count
-    let copyCount = 0;
-
-    // from navbar
-    const copyCountElement = document.getElementById('copyCount');
-    
-    const copies = document.querySelectorAll('.btn-copy');
-    for (const copy of copies) {
-        copy.addEventListener('click', function(event) {
-            // console.log(copy);
-            const hotlineElement = event.target.parentNode.parentNode.querySelector('.hotline').innerText;
-                
-                navigator.clipboard.writeText(hotlineElement);
-                // console.log(hotlineElement);
-
-            alert(`${hotlineElement} copied`);
-            copyCount++;
-            copyCountElement.innerText = copyCount;
-        })
-      }

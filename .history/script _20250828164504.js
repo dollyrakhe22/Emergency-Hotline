@@ -73,8 +73,9 @@ clearBtn.addEventListener('click', () => {
                 navigator.clipboard.writeText(hotlineElement);
                 // console.log(hotlineElement);
 
-            alert(`${hotlineElement} copied`);
+            alert(`${hotlineElement} copied);
             copyCount++;
             copyCountElement.innerText = copyCount;
-        })
-      }
+        });
+    
+    }

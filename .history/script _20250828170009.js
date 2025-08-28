@@ -55,7 +55,7 @@ callButtons.forEach(button => {
 // Clear History
 clearBtn.addEventListener('click', () => {
     history.innerHTML = "";
-});
+
 
 
 // copy button count

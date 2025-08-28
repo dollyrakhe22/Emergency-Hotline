@@ -76,5 +76,6 @@ clearBtn.addEventListener('click', () => {
             alert(`${hotlineElement} copied`);
             copyCount++;
             copyCountElement.innerText = copyCount;
-        })
-      }
+ });
+  
+    }

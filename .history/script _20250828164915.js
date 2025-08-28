@@ -78,3 +78,4 @@ clearBtn.addEventListener('click', () => {
             copyCountElement.innerText = copyCount;
         })
       }
+  
